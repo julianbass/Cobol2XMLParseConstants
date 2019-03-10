@@ -44,7 +44,7 @@ public class Cobol2XMLParseConstants {
 	 * @throws Exception
 	 */
 	public static void main(String[] args) throws Exception {
-		System.out.println("Cobol2XMLwithCommentLoneParsing V0.1.0");
+		System.out.println("Cobol2XMLParseConstants V0.1.0");
 		XMLPayload xmlp = new XMLPayload();
 		
 		/* The first command line paprameter is used to get the cobol source file namee
