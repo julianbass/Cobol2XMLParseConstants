@@ -92,7 +92,7 @@ public class CobolParser {
 	 *
 	 */
 	protected Parser constantValue() {
-		System.out.println("constantValue()");
+		//System.out.println("constantValue()");
 		Sequence s = new Sequence();
 		s.add(new Num() );
 		s.add(new Word() );
