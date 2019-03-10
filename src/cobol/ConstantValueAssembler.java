@@ -37,8 +37,8 @@ public void workOn(Assembly a) {
 	//System.out.println("Token string[4]: " + c.getConstantValue() );
 	
 	t = (Token) a.pop();
-	String tokenString = t.sval();
 	//This should be the word "value" so we don't need any action here
+	//String tokenString = t.sval();
 	//System.out.println("Token string[3]: " + tokenString );
 	
 	t = (Token) a.pop();
@@ -46,7 +46,7 @@ public void workOn(Assembly a) {
 	//System.out.println("Token string[2]: " + c.getConstantName() );
 	
 	t = (Token) a.pop();
-	c.setLineNumber( t.nval() );
+	c.setLineNumber( (int) Math.round(t.nval()) );
 	//System.out.println("Token string[2]: " + c.getLineNumber() );
 
 	a.setTarget(c);

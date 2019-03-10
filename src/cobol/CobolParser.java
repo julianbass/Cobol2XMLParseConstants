@@ -21,12 +21,12 @@
 package cobol;
 
 import parse.Alternation;
-import parse.Repetition;
+//import parse.Repetition;
 import parse.Empty;
 import parse.Parser;
 import parse.Sequence;
 import parse.tokens.CaselessLiteral;
-import parse.tokens.Literal;
+//import parse.tokens.Literal;
 import parse.tokens.Num;
 import parse.tokens.Symbol;
 import parse.tokens.Tokenizer;
@@ -88,7 +88,7 @@ public class CobolParser {
 	/*
 	 * Return a parser that will recognize the grammar:
 	 * 
-	 *    ***--- comment text
+	 *    <line number> <contstant name> "value" <constant value>.
 	 *
 	 */
 	protected Parser constantValue() {

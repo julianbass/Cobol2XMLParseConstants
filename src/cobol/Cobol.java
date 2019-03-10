@@ -27,7 +27,7 @@ public class Cobol implements PubliclyCloneable {
 	// Constant Value
 	protected String constantName;
 	protected double constantValue;
-	protected double lineNumber = 0;
+	protected int lineNumber = 0;
 	
 	protected String commentLine;
 	protected String program_id;
@@ -124,7 +124,7 @@ public class Cobol implements PubliclyCloneable {
 	 *
 	 * @return line number from the COBOL program
 	 */
-	public double getLineNumber() {
+	public int getLineNumber() {
 		return lineNumber;
 	}
 	
@@ -218,7 +218,7 @@ public class Cobol implements PubliclyCloneable {
 	 *
 	 * @param line number from the COBOL program
 	 */
-	public void setLineNumber(double lineNumber) {
+	public void setLineNumber(int lineNumber) {
 		this.lineNumber = lineNumber;
 	}
 	

@@ -146,7 +146,7 @@ public class XMLPayload {
 	}
 	
  	void addConstantValueElement(String constantName, double constantValue,
- 										double lineNumber) {
+ 										int lineNumber) {
 		//  Program ID element
 		
 		if(constantName != null) {
@@ -162,7 +162,7 @@ public class XMLPayload {
 			// insert line number of constant into XML file
 			Element lineID = doc.createElement(constantName);
 			Attr attrType =	doc.createAttribute("Line_Number" );
-			attrType.setValue( Double.toString(lineNumber) );
+			attrType.setValue( Integer.toString(lineNumber) );
 			lineID.setAttributeNode(attrType);
 			cobolname.appendChild(lineID);
 			
