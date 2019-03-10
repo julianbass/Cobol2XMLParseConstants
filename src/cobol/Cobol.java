@@ -24,6 +24,11 @@ package cobol;
 import utensil.*;
 
 public class Cobol implements PubliclyCloneable {
+	// Constant Value
+	protected String constantName;
+	protected double constantValue;
+	protected double lineNumber = 0;
+	
 	protected String commentLine;
 	protected String program_id;
 	protected String sectionName;
@@ -31,6 +36,8 @@ public class Cobol implements PubliclyCloneable {
 	protected int dayDateWritten = 0;
 	protected String monthDateWritten;
 	protected int yearDateWritten = 0;
+	
+	
 
 	
 	/**
@@ -93,6 +100,34 @@ public class Cobol implements PubliclyCloneable {
 
 		return true;
 	}
+	
+	/**
+	 * Return constant name from the COBOL program.
+	 *
+	 * @return constant name from the COBOL program
+	 */
+	public String getConstantName() {
+		return constantName;
+	}
+	
+	/**
+	 * Return constant value from the COBOL program.
+	 *
+	 * @return constant value from the COBOL program
+	 */
+	public double getConstantValue() {
+		return constantValue;
+	}
+	
+	/**
+	 * Return line number from the COBOL program.
+	 *
+	 * @return line number from the COBOL program
+	 */
+	public double getLineNumber() {
+		return lineNumber;
+	}
+	
 
 	/**
 	 * Return line of commented text from the COBOL program.
@@ -161,9 +196,36 @@ public class Cobol implements PubliclyCloneable {
 	}
 	
 	/**
+	 * Set constant name from the COBOL program.
+	 *
+	 * @param constant name from the COBOL program
+	 */
+	public void setConstantName(String constantName) {
+		this.constantName = constantName;
+	}
+
+	/**
+	 * Set constant value from the COBOL program.
+	 *
+	 * @param constant value from the COBOL program
+	 */
+	public void setConstantValue(double constantValue) {
+		this.constantValue = constantValue;
+	}
+
+	/**
+	 * Set line number from the COBOL program.
+	 *
+	 * @param line number from the COBOL program
+	 */
+	public void setLineNumber(double lineNumber) {
+		this.lineNumber = lineNumber;
+	}
+	
+	/**
 	 * Set a line of commented text from the COBOL program.
 	 *
-	 * @return line of commented text from the COBOL program
+	 * @param line of commented text from the COBOL program
 	 */
 	public void setCommentLine(String commentLine) {
 		//System.out.println("setComment(): " + commentLine);
